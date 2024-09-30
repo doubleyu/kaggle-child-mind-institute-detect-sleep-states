@@ -50,6 +50,7 @@ def main(cfg: TrainConfig):
         name=cfg.exp_name,
         project="child-mind-institute-detect-sleep-states",
     )
+    pl_logger.experiment.config["key"] = "67f23c117162db3969ae0a9cad709bf060f2b6bc"
     pl_logger.log_hyperparams(cfg)
 
     trainer = Trainer(
