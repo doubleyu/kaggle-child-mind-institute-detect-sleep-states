@@ -101,7 +101,7 @@ class SegTrainDataset(Dataset):
         label[:, [1, 2]] = gaussian_label(
             label[:, [1, 2]], offset=self.cfg.dataset.offset, sigma=self.cfg.dataset.sigma
         )
-
+        import pdb; pdb.set_trace()
         return {
             "series_id": series_id,
             "feature": feature,  # (num_features, upsampled_num_frames)
